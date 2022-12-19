@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#wrapper{
+    background-color: rgb(176, 58, 176);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ping{
+    background-color: #fff;
+    width: 650px;
+    height: 400px;
+    display: flex;
+
+    position: relative;
+}
+.left{
+    background-color: #000;
+    width: 40px;
+    height: 50%;
+    position: absolute;
+    top: 25%;
+    animation-name: up;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.ball{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #000;
+    position: absolute;
+    right: 50%;
+    top: 40%;
+    animation-name: roll;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.right{
+    background-color: #000;
+    width: 40px;
+    height: 50%;
+    position: absolute;
+    right: 0;
+    top: 25%;
+    animation-name: down;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+ @keyframes up{
+ 0%{top: 25%;}
+ 25%{top: 50%;}
+ 50%{top: 25%;}
+ 75%{top: 0;}
+ 100%{top: 25%;}
+}
+@keyframes down{
+    0%{top:25%;}
+    25%{top: 0%;}
+    50%{top: 25%;}
+    75%{top: 50%;}
+    100%{top: 25%;}
+} 
+@keyframes roll{
+    0%{transform: rotate(0);}
+    25%{transform: rotate(360deg); right: 6%;}
+    50%{transform: rotate(0); right: 50%;}
+    75%{transform: rotate(360deg); right:86%;}
+    100%{transform: rotate(0); right: 50%;}
+}

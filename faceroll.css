@@ -83,7 +83,7 @@
 }
 @keyframes rotateFace{
     0%{transform: rotate(0); left: 0;}
-    50%{transform: rotate(180deg); left: 83%;}
+    50%{transform: rotate(180deg); left: calc(100% - 250px); }
     100%{transform: rotate(0); left: 0;}
 }
 @keyframes blink{
